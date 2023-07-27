@@ -2,9 +2,9 @@ def dict(**kwargs) -> {}:
     arg_dict = {}
     for key, value in kwargs.items():
         if value.__hash__:
-            arg_dict[key] = value
+            arg_dict[value] = key
         else:
-            arg_dict[key] = str(value)
+            arg_dict[str(value)] = key
     return arg_dict
 
 
